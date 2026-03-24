@@ -162,7 +162,7 @@ This means the expected workflow is:
 1. Run `python3 Pipeline.py`
 2. Confirm or edit metadata for each ranking list
 3. Review any unmatched rows in `ranking_entries_parts/`
-4. Choose whether to keep, drop, or use edited rows
+4. Choose whether to keep, drop, or use edited rows (probably gonna remove this part since it requires a lot of human parsing and editing)
 5. Use the final `ranking_lists.csv` and `ranking_entries.csv` outputs
 
 ## Notes And Limitations
