@@ -15,7 +15,7 @@ import os
 import difflib
 
 from siteMetadata import get_site_metadata_interactive, get_site_metadata_auto
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 
 ALIAS_CSV_PATH = "AtlasDatabase/data/CollegeAliases.csv"
@@ -115,15 +115,28 @@ def _get_scrape_kwargs_for_url(url: str) -> Dict[str, object]:
                 "wait_for_selector": "table",
                 "table_selector": "table",
             }
+        if "value-colleges" in path:
+            return {
+                "wait_for_selector": "table, article, ol li",
+                "table_selector": "table",
+            }
         return {
             "wait_for_selector": "article, ol li, h2, h3",
         }
     if "usnews.com" in domain:
-        return {
-            "wait_for_selector": "a[href*='/best-colleges/'], article, [class*='ranking']",
+        q = parse_qs(urlparse(url).query)
+        mode = (q.get("_mode") or [""])[0].lower()
+        kwargs: Dict[str, object] = {
+            "wait_for_selector": "a[href*='/best-colleges/'], article, [class*='ranking'], table",
             "headless": True,
             "timeout": 60,
         }
+        # Table ranking pages have a bounded row count; lower target = less scrolling.
+        if mode == "table" or "/rankings/" in path:
+            kwargs["usnews_soft_target"] = 400
+        else:
+            kwargs["usnews_soft_target"] = 900
+        return kwargs
     if "princetonreview.com" in domain:
         return {
             "wait_for_selector": "a[href*='/school/'], [class*='ranking'], article",
@@ -827,10 +840,11 @@ if __name__ == "__main__":
     # Step 1: Build the ranking list metadata table (one row per URL)
     # Hardcode your list of ranking URLs here:
     urls = [
-        #"https://www.forbes.com/top-colleges/",
-        "https://www.forbes.com/value-colleges/list/#tab:rank",
-        #"https://www.usnews.com/best-colleges/rankings/national-universities?myCollege=national-universities&_sort=myCollege&_sortDirection=asc&_mode=table",
-        #"https://www.usnews.com/best-colleges/search?_sort=rank&_sortDirection=asc&_mode=table",
+        # US News: tune scraper per URL; start with one ranking list (table mode).
+        "https://www.usnews.com/best-colleges/rankings/national-universities?myCollege=national-universities&_sort=myCollege&_sortDirection=asc&_mode=table",
+        # "https://www.forbes.com/top-colleges/",
+        # "https://www.forbes.com/value-colleges/list/#tab:rank",
+        # "https://www.usnews.com/best-colleges/search?_sort=rank&_sortDirection=asc&_mode=table",
         #"https://www.princetonreview.com/college-rankings/?rankings=best-career-services",
         #"https://www.niche.com/colleges/search/best-colleges/",
         #"https://www.mastersportal.com/search/universities/master/rankings/united-states",

@@ -11,13 +11,4 @@ ListId,UnitId,Rank,Score,IsTied,RawName,Match Method,Match Source CSV,Match Conf
 6959526016,,10,,False,Studying at a U.S. Grad School,UNMATCHED,,0.0
 6959526016,,11,,False,Studying at a U.S. College,UNMATCHED,,0.0
 6959526016,,12,,False,Student Loans,UNMATCHED,,0.0
-6959526016,186131,13,,False,Princeton University,EXACT,CollegeAliases.csv:InstName,1.0
-6959526016,166683,14,,False,Massachusetts Institute of Technology,EXACT,CollegeAliases.csv:InstName,1.0
-6959526016,166027,15,,False,Harvard University,EXACT,CollegeAliases.csv:InstName,1.0
-6959526016,243744,16,,False,Stanford University,EXACT,CollegeAliases.csv:InstName,1.0
-6959526016,130794,17,,False,Yale University,EXACT,CollegeAliases.csv:InstName,1.0
-6959526016,144050,18,,False,University of Chicago,EXACT,CollegeAliases.csv:InstName,1.0
-6959526016,198419,19,,False,Duke University,EXACT,CollegeAliases.csv:InstName,1.0
-6959526016,162928,20,,False,Johns Hopkins University,EXACT,CollegeAliases.csv:InstName,1.0
-6959526016,147767,21,,False,Northwestern University,EXACT,CollegeAliases.csv:InstName,1.0
 6959526016,,22,,False,Liberal Arts Colleges,UNMATCHED,,0.0

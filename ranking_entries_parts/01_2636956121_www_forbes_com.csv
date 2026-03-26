@@ -1,0 +1,301 @@
+ListId,UnitId,Rank,Score,IsTied,RawName,Match Method,Match Source CSV,Match Confidence
+2636956121,230038,1,,False,Brigham Young University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,186131,1,,False,Princeton University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,110653,1,,False,"University of California, Irvine",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,110662,1,,False,"University of California, Los Angeles",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,110635,1,,False,"University of California, Berkeley",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,243744,1,,False,Stanford University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,166027,1,,False,Harvard University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,164465,1,,False,Amherst College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,190512,1,,False,"CUNY, Baruch College",EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,236948,1,,False,"University of Washington, Seattle",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,110644,1,,False,"University of California, Davis",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,110705,1,,False,"University of California, Santa Barbara",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,110680,1,,False,"University of California, San Diego",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,121345,1,,False,Pomona College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,130794,1,,False,Yale University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,198419,1,,False,Duke University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,168342,1,,False,Williams College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,182670,1,,False,Dartmouth College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,199120,1,,False,"University of North Carolina, Chapel Hill",FUZZY,CollegeAliases.csv:InstName,0.963855421686747
+2636956121,134130,1,,False,University of Florida,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,227757,1,,False,Rice University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,377555,1,,False,University of Washington Bothell,NORMALIZED,CollegeNamePreferences.csv:PreferredInstName,0.99
+2636956121,168218,1,,False,Wellesley College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,212911,1,,False,Haverford College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,166683,1,,False,Massachusetts Institute of Technology,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,110404,1,,False,California Institute of Technology,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,110671,1,,False,"University of California, Riverside",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,221999,1,,False,Vanderbilt University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,196097,1,,False,"Stony Brook University, SUNY",EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,122409,1,,False,San Diego State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,228787,1,,False,"University of Texas, Dallas",FUZZY_VARIANT,CollegeAliases.csv:InstName,0.9454545454545454
+2636956121,234076,1,,False,University of Virginia,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,217156,1,,False,Brown University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,190664,1,,False,"CUNY, Queens College",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,190099,1,,False,Colgate University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,160977,1,,False,Bates College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,110583,1,,False,"California State University, Long Beach",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,196079,1,,False,"Binghamton University, SUNY",EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,230764,1,,False,University of Utah,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,122755,1,,False,San Jose State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,163286,1,,False,"University of Maryland, College Park",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,230959,1,,False,Middlebury College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,190415,1,,False,Cornell University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,216287,1,,False,Swarthmore College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,228723,1,,False,"Texas A&M University, College Station",FUZZY,CollegeAliases.csv:InstName,0.9743589743589743
+2636956121,112260,1,,False,Claremont McKenna College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,190372,1,,False,Cooper Union,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,190150,1,,False,Columbia University,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,110714,1,,False,"University of California, Santa Cruz",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,145637,1,,False,"University of Illinois, Urbana-Champaign",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,190549,1,,False,"CUNY, Brooklyn College",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,145600,1,,False,"University of Illinois, Chicago",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,110565,1,,False,"California State University, Fullerton",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,186380,1,,False,Rutgers University,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,130697,1,,False,Wesleyan University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,187967,1,,False,New Mexico Institute of Mining and Technology,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,131496,1,,False,Georgetown University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,191515,1,,False,Hamilton College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,110529,1,,False,"California State Polytechnic University, Pomona",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,170976,1,,False,"University of Michigan, Ann Arbor",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,231624,1,,False,College of William & Mary,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,104179,1,,False,University of Arizona,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,262129,1,,False,New College of Florida,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,197133,1,,False,Vassar College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,228778,1,,False,"University of Texas, Austin",FUZZY_VARIANT,CollegeAliases.csv:InstName,0.9454545454545454
+2636956121,139959,1,,False,University of Georgia,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,104151,1,,False,"Arizona State University, Tempe",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,199193,1,,False,"North Carolina State University, Raleigh",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,152257,1,,False,Purdue University,EXACT,HistoricalUrbanColleges.csv:InstName,1.0
+2636956121,110422,1,,False,"California Polytechnic State University, San Luis Obispo",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,196088,1,,False,University at Buffalo (SUNY),EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,139658,1,,False,Emory University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,110538,1,,False,"California State University, Chico",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,190594,1,,False,"CUNY, Hunter College",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,162928,1,,False,Johns Hopkins University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,126614,1,,False,"University of Colorado, Boulder",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,232186,1,,False,George Mason University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,189097,1,,False,Barnard College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,139755,1,,False,Georgia Institute of Technology,EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,198385,1,,False,Davidson College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,161004,1,,False,Bowdoin College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,236939,1,,False,Washington State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,215062,1,,False,University of Pennsylvania,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,190567,1,,False,"CUNY, The City College of New York",EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,144050,1,,False,University of Chicago,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,142522,1,,False,Brigham Young University-Idaho,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,147767,1,,False,Northwestern University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,196060,1,,False,"University at Albany, SUNY",EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,174066,1,,False,"University of Minnesota, Twin Cities",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,110556,1,,False,"California State University, Fresno",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,232423,1,,False,James Madison University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,110608,1,,False,"California State University, Northridge",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,197708,1,,False,Yeshiva University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,178411,1,,False,Missouri University of Science and Technology,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,110617,1,,False,"California State University, Sacramento",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,225511,1,,False,University of Houston,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,153603,1,,False,Ohio State University,FUZZY,CollegeAliases.csv:InstName,0.9047619047619048
+2636956121,153384,1,,False,Grinnell College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,153658,1,,False,University of Iowa,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,168148,1,,False,Tufts University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,230728,1,,False,Utah State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,190558,1,,False,"CUNY, College of Staten Island",TOKEN_SORT,CollegeAliases.csv:InstName,0.95
+2636956121,163268,1,,False,"University of Maryland, Baltimore County",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,129020,1,,False,University of Connecticut,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,151351,1,,False,"Indiana University, Bloomington",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,237011,1,,False,Western Washington University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,185828,1,,False,New Jersey Institute of Technology,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,110574,1,,False,"California State University, East Bay",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,110495,1,,False,"California State University, Stanislaus",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,159647,1,,False,Louisiana State University,FUZZY,CollegeAliases.csv:InstName,0.9019607843137255
+2636956121,178697,1,,False,College of the Ozarks,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,122597,1,,False,San Francisco State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,161086,1,,False,Colby College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,234207,1,,False,Washington and Lee University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,196167,1,,False,"SUNY, Geneseo",EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,229115,1,,False,Texas Tech University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,240444,1,,False,"University of Wisconsin, Madison",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,134097,1,,False,Florida State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,132903,1,,False,University of Central Florida,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,207388,1,,False,Oklahoma State University,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,233921,1,,False,Virginia Tech,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,217864,1,,False,The Citadel,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,135726,1,,False,Miami University (OH),FUZZY_TOKEN_SORT,CollegeAliases.csv:InstName,0.9473684210526315
+2636956121,217882,1,,False,Clemson University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,137351,1,,False,University of South Florida,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,209551,1,,False,University of Oregon,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,164924,1,,False,Boston College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,212577,1,,False,Franklin and Marshall College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,179867,1,,False,Washington University in St. Louis,EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,207500,1,,False,"University of Oklahoma, Norman",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,111188,1,,False,California State University Maritime Academy,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,173258,1,,False,Carleton College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,234085,1,,False,Virginia Military Institute,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,180416,1,,False,Montana Tech of the University of Montana,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,153603,1,,False,Iowa State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,233374,1,,False,University of Richmond,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,164076,1,,False,Towson University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,182290,1,,False,"University of Nevada, Reno",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,110592,1,,False,"California State University, Los Angeles",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,155317,1,,False,University of Kansas,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,240727,1,,False,University of Wyoming,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,156295,1,,False,Berea College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,190600,1,,False,"CUNY, John Jay College of Criminal Justice",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,209922,1,,False,Reed College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,221759,1,,False,"University of Tennessee, Knoxville",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,228769,1,,False,"University of Texas, Arlington",FUZZY_VARIANT,CollegeAliases.csv:InstName,0.9508196721311475
+2636956121,152080,1,,False,University of Notre Dame,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,232681,1,,False,University of Mary Washington,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,178396,1,,False,"University of Missouri, Columbia",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,130943,1,,False,University of Delaware,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,181464,1,,False,"University of Nebraska, Lincoln",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,196042,1,,False,"SUNY, Farmingdale State College",FUZZY,CollegeNamePreferences.csv:OriginalInstName,0.9090909090909091
+2636956121,209542,1,,False,Oregon State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,203535,1,,False,Kenyon College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,238032,1,,False,West Virginia University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,174251,1,,False,"University of Minnesota, Morris",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,171128,1,,False,Michigan Technological University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,121257,1,,False,Pitzer College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,159647,1,,False,Louisiana Tech University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,171100,1,,False,Michigan State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,126818,1,,False,"Colorado State University, Fort Collins",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,106397,1,,False,University of Arkansas,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,123165,1,,False,Scripps College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,133951,1,,False,Florida International University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,212805,1,,False,Grove City College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,123961,1,,False,University of Southern California,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,231174,1,,False,University of Vermont,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,199847,1,,False,Wake Forest University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,195526,1,,False,Skidmore College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,167835,1,,False,Smith College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,133669,1,,False,Florida Atlantic University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,213543,1,,False,Lehigh University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,182281,1,,False,"University of Nevada, Las Vegas",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,130590,1,,False,Trinity College (CT),FUZZY,CollegeAliases.csv:InstName,0.9090909090909091
+2636956121,196592,1,,False,Touro College,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,100706,1,,False,University of Alabama in Huntsville,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,221847,1,,False,Tennessee Technological University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,178615,1,,False,Truman State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,123572,1,,False,Sonoma State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,128300,1,,False,"University of Colorado, Denver",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,188030,1,,False,New Mexico State University,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,237057,1,,False,Whitman College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,197869,1,,False,Appalachian State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,185590,1,,False,Montclair State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,102614,1,,False,"University of Alaska, Fairbanks",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,104586,1,,False,"Embry-Riddle Aeronautical University, Prescott",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,193900,1,,False,New York University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,228796,1,,False,"University of Texas, El Paso",FUZZY_VARIANT,CollegeAliases.csv:InstName,0.9473684210526315
+2636956121,163912,1,,False,St. Mary's College of Maryland,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,219356,1,,False,North Dakota State University,FUZZY,CollegeAliases.csv:InstName,0.9310344827586207
+2636956121,141574,1,,False,"University of Hawaii, Manoa",FUZZY,CollegeAliases.csv:InstName,0.9454545454545454
+2636956121,110510,1,,False,"California State University, San Bernardino",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,196176,1,,False,"SUNY, College at New Paltz",EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,100858,1,,False,Auburn University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,187134,1,,False,College of New Jersey,VARIANT,CollegeAliases.csv:InstName,0.97
+2636956121,176080,1,,False,Mississippi State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,152673,1,,False,Wabash College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,126775,1,,False,Colorado School of Mines,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,213385,1,,False,Lafayette College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,190637,1,,False,"CUNY, Lehman College",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,228459,1,,False,Texas State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,227216,1,,False,University of North Texas,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,160658,1,,False,"University of Louisiana, Lafayette",FUZZY,CollegeAliases.csv:InstName,0.9565217391304348
+2636956121,122931,1,,False,Santa Clara University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,124292,1,,False,Thomas Aquinas College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,186201,1,,False,Ramapo College of New Jersey,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,166692,1,,False,Massachusetts Maritime Academy,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,219347,1,,False,South Dakota School of Mines and Technology,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,166629,1,,False,"University of Massachusetts, Amherst",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,196103,1,,False,"SUNY, College of Environmental Science and Forestry",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,495767,1,,False,Pennsylvania State University,VARIANT,HistoricalUrbanColleges.csv:InstName,0.97
+2636956121,201885,1,,False,University of Cincinnati,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,188225,1,,False,University of New Mexico,FUZZY,CollegeNamePreferences.csv:PreferredInstName,0.9056603773584906
+2636956121,234827,1,,False,Central Washington University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,136172,1,,False,University of North Florida,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,482680,1,,False,University of North Georgia,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,209506,1,,False,Oregon Institute of Technology,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,176017,1,,False,University of Mississippi,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,164580,1,,False,Babson College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,184782,1,,False,Rowan University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,196291,1,,False,SUNY Maritime College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,145813,1,,False,Illinois State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,157085,1,,False,University of Kentucky,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,180461,1,,False,Montana State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,166124,1,,False,College of the Holy Cross,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,166513,1,,False,University of Massachusetts Lowell,NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,181394,1,,False,"University of Nebraska, Omaha",FUZZY,CollegeAliases.csv:InstName,0.9491525423728814
+2636956121,186876,1,,False,Stockton University,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,100751,1,,False,University of Alabama,VARIANT,CollegeAliases.csv:InstName,0.97
+2636956121,179043,1,,False,Rockhurst University,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,211440,1,,False,Carnegie Mellon University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,163851,1,,False,Salisbury University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,227368,1,,False,"University of Texas, Rio Grande Valley",VARIANT,CollegeAliases.csv:InstName,0.97
+2636956121,199139,1,,False,"University of North Carolina, Charlotte",FUZZY,CollegeAliases.csv:InstName,0.9620253164556962
+2636956121,240268,1,,False,"University of Wisconsin, Eau Claire",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,105330,1,,False,Northern Arizona University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,133553,1,,False,"Embry-Riddle Aeronautical University, Daytona Beach",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,102553,1,,False,"University of Alaska, Anchorage",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,230782,1,,False,Weber State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,228246,1,,False,Southern Methodist University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,142285,1,,False,University of Idaho,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,120254,1,,False,Occidental College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,195304,1,,False,Sarah Lawrence College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,192703,1,,False,Manhattan College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,201645,1,,False,Case Western Reserve University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,126580,1,,False,University of Colorado Colorado Springs,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,491491,1,,False,Ohio University,FUZZY,HistoricalUrbanColleges.csv:InstName,0.9032258064516129
+2636956121,166638,1,,False,University of Massachusetts Boston,NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,126678,1,,False,Colorado College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,159939,1,,False,University of New Orleans,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,128902,1,,False,Connecticut College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,117946,1,,False,Loyola Marymount University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,218539,1,,False,Presbyterian College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,219833,1,,False,Christian Brothers University,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,207971,1,,False,University of Tulsa,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,145725,1,,False,Illinois Institute of Technology,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,125727,1,,False,Westmont College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,174914,1,,False,University of St. Thomas (TX),FUZZY,CollegeAliases.csv:InstName,0.9387755102040817
+2636956121,120883,1,,False,University of the Pacific (CA),FUZZY,CollegeAliases.csv:InstName,0.9433962264150944
+2636956121,212009,1,,False,Dickinson College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,213367,1,,False,La Salle University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,131159,1,,False,American University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,115409,1,,False,Harvey Mudd College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,199111,1,,False,"University of North Carolina, Asheville",NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,240329,1,,False,"University of Wisconsin, La Crosse",EXACT,CollegeNamePreferences.csv:PreferredInstName,1.0
+2636956121,179946,1,,False,Westminster College (MO),FUZZY,CollegeNamePreferences.csv:OriginalInstName,0.926829268292683
+2636956121,229267,1,,False,Trinity University (TX),FUZZY,CollegeAliases.csv:InstName,0.9230769230769231
+2636956121,215293,1,,False,University of Pittsburgh,EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,155399,1,,False,Kansas State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,227881,1,,False,Sam Houston State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,144740,1,,False,DePaul University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,100663,1,,False,"University of Alabama, Birmingham",FUZZY,CollegeAliases.csv:InstName,0.9552238805970149
+2636956121,174783,1,,False,Saint Cloud State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,154095,1,,False,University of Northern Iowa,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,151111,1,,False,"Indiana University-Purdue University, Indianapolis",NORMALIZED,CollegeNamePreferences.csv:PreferredInstName,0.99
+2636956121,150400,1,,False,DePauw University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,157289,1,,False,University of Louisville,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,229179,1,,False,Texas Woman's University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,202523,1,,False,Denison University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,195173,1,,False,St. Francis College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,212674,1,,False,Gettysburg College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,133881,1,,False,Florida Institute of Technology,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,196185,1,,False,"SUNY, College at Oneonta",EXACT,CollegeAliases.csv:Alias,1.0
+2636956121,218706,1,,False,University of South Carolina,FUZZY,CollegeNamePreferences.csv:OriginalInstName,0.9032258064516129
+2636956121,149781,1,,False,Wheaton College (IL),FUZZY,CollegeAliases.csv:InstName,0.9090909090909091
+2636956121,150455,1,,False,Earlham College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,131469,1,,False,George Washington University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,173902,1,,False,Macalester College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,217484,1,,False,University of Rhode Island,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,195030,1,,False,University of Rochester,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,200280,1,,False,University of North Dakota,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,151324,1,,False,Indiana State University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,190044,1,,False,Clarkson University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,149231,1,,False,Southern Illinois University Edwardsville,NORMALIZED,CollegeAliases.csv:InstName,0.99
+2636956121,191241,1,,False,Fordham University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,191649,1,,False,Hofstra University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,218973,1,,False,Wofford College,EXACT,CollegeNamePreferences.csv:OriginalInstName,1.0
+2636956121,164270,1,,False,McDaniel College,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,165015,1,,False,Brandeis University,EXACT,CollegeAliases.csv:InstName,1.0
+2636956121,199148,1,,False,"University of North Carolina, Greensboro",FUZZY,CollegeAliases.csv:InstName,0.9629629629629629

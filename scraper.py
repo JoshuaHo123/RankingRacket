@@ -42,7 +42,9 @@ class CollegeRankingScraper:
         self.last_page_html = None
         self.last_good_page_html = None
         self._lightweight_routes_enabled = False
-        self.usnews_soft_target = 2000
+        # Stop scrolling once this many profile links are visible. US News ranking
+        # pages are usually a few hundred rows; 2000 forced long scroll loops.
+        self.usnews_soft_target = 650
         self.session = requests.Session()
         self.session.headers.update(
             {
@@ -358,56 +360,127 @@ class CollegeRankingScraper:
 
         return dismissed
 
-    def _stabilize_usnews_page(self):
+    def _usnews_is_table_mode(self, url: Optional[str]) -> bool:
+        if not url:
+            return False
+        mode = (parse_qs(urlparse(url).query).get("_mode") or [""])[0].lower()
+        return mode == "table"
+
+    def _usnews_goto_with_retries(self, url: str, max_tries: int = 4) -> None:
+        """US News sometimes returns transient net::ERR_HTTP2_PROTOCOL_ERROR; retry with backoff."""
         if not self.page:
             return
+        last_err: Optional[Exception] = None
+        for i in range(max_tries):
+            try:
+                self.page.goto(
+                    url,
+                    wait_until="domcontentloaded",
+                    timeout=self.timeout * 1000,
+                )
+                return
+            except PlaywrightError as e:
+                last_err = e
+                msg = str(e)
+                transient = any(
+                    s in msg
+                    for s in (
+                        "ERR_HTTP2",
+                        "ERR_CONNECTION",
+                        "ERR_NETWORK",
+                        "ERR_ABORTED",
+                        "net::",
+                        "Navigation failed",
+                        "Protocol error",
+                    )
+                ) or isinstance(e, PlaywrightTimeoutError)
+                if i < max_tries - 1 and transient:
+                    delay_ms = 1200 * (i + 1)
+                    logger.warning(
+                        "US News goto attempt %s/%s failed (%s); retrying in %sms",
+                        i + 1,
+                        max_tries,
+                        e,
+                        delay_ms,
+                    )
+                    self.page.wait_for_timeout(delay_ms)
+                    continue
+                raise last_err
+
+    def _stabilize_usnews_page(self, url: Optional[str] = None):
+        if not self.page:
+            return
+        table_mode = self._usnews_is_table_mode(url)
         stable_rounds = 0
         soft_target = self.usnews_soft_target
+        if table_mode:
+            # Table rankings load a bounded set of rows; no need to chase thousands of links.
+            soft_target = min(soft_target, 400)
+        max_rounds = 8 if table_mode else 14
+        wheel_passes = 1 if table_mode else 2
+        wheel_delay_ms = 500 if table_mode else 700
+        settle_ms = 650 if table_mode else 1100
+        stable_need = 1 if table_mode else 2
+
         previous_count = -1
         previous_height = -1
         previous_scroll_y = -1
         self._remember_last_good_page_html()
-        for _ in range(16):
-            self._dismiss_usnews_sign_in_modal()
-            clicked = self._click_expand_controls()
-
-            # US News is sensitive to fast, large jumps; scroll in smaller steps and
-            # give the client time to render additional rows before continuing.
-            for _ in range(2):
-                self.page.mouse.wheel(0, 1200)
-                self.page.wait_for_timeout(700)
-
-            self._dismiss_usnews_sign_in_modal()
+        for _ in range(max_rounds):
             try:
-                self.page.wait_for_load_state("domcontentloaded", timeout=1500)
-            except PlaywrightTimeoutError:
-                pass
-            self.page.wait_for_timeout(1100)
+                self._dismiss_usnews_sign_in_modal()
+                clicked = self._click_expand_controls()
+
+                # US News is sensitive to fast, large jumps; scroll in smaller steps and
+                # give the client time to render additional rows before continuing.
+                for _ in range(wheel_passes):
+                    self.page.mouse.wheel(0, 1200)
+                    self.page.wait_for_timeout(wheel_delay_ms)
+
+                self._dismiss_usnews_sign_in_modal()
+                try:
+                    self.page.wait_for_load_state("domcontentloaded", timeout=1500)
+                except PlaywrightTimeoutError:
+                    pass
+                self.page.wait_for_timeout(settle_ms)
+                self._remember_last_good_page_html()
+                current_count = self._count_usnews_profile_links()
+                current_height = int(self.page.evaluate("document.body.scrollHeight"))
+                current_scroll_y = int(self.page.evaluate("window.scrollY"))
+                viewport_height = int(self.page.evaluate("window.innerHeight"))
+                logger.info(f"US News visible profile links: {current_count}")
+                no_growth = current_count == previous_count and current_height == previous_height
+                no_scroll_progress = current_scroll_y == previous_scroll_y and current_height == previous_height
+                at_bottom = current_scroll_y + viewport_height >= current_height - 50
+                if no_growth and no_scroll_progress and not clicked:
+                    stable_rounds += 1
+                else:
+                    stable_rounds = 0
+                previous_count = current_count
+                previous_height = current_height
+                previous_scroll_y = current_scroll_y
+                if stable_rounds >= stable_need and at_bottom:
+                    logger.info("US News page stopped growing; ending scroll loop")
+                    break
+                if current_count >= soft_target:
+                    logger.info("US News reached soft target; ending scroll loop")
+                    break
+                if table_mode and current_count >= 180 and stable_rounds >= 1 and at_bottom:
+                    logger.info("US News table ranking: enough links loaded; ending scroll loop")
+                    break
+            except PlaywrightError as e:
+                logger.warning(
+                    "US News stabilize interrupted (using last good snapshot); cause: %s",
+                    e,
+                )
+                self._remember_last_good_page_html()
+                break
+        try:
+            self.page.evaluate("window.scrollTo(0, 0)")
+            self.page.wait_for_timeout(500)
             self._remember_last_good_page_html()
-            current_count = self._count_usnews_profile_links()
-            current_height = int(self.page.evaluate("document.body.scrollHeight"))
-            current_scroll_y = int(self.page.evaluate("window.scrollY"))
-            viewport_height = int(self.page.evaluate("window.innerHeight"))
-            logger.info(f"US News visible profile links: {current_count}")
-            no_growth = current_count == previous_count and current_height == previous_height
-            no_scroll_progress = current_scroll_y == previous_scroll_y and current_height == previous_height
-            at_bottom = current_scroll_y + viewport_height >= current_height - 50
-            if no_growth and no_scroll_progress and not clicked:
-                stable_rounds += 1
-            else:
-                stable_rounds = 0
-            previous_count = current_count
-            previous_height = current_height
-            previous_scroll_y = current_scroll_y
-            if stable_rounds >= 2 and at_bottom:
-                logger.info("US News page stopped growing; ending scroll loop")
-                break
-            if current_count >= soft_target:
-                logger.info("US News reached soft target; ending scroll loop")
-                break
-        self.page.evaluate("window.scrollTo(0, 0)")
-        self.page.wait_for_timeout(500)
-        self._remember_last_good_page_html()
+        except PlaywrightError:
+            self._remember_last_good_page_html()
 
     def _stabilize_niche_page(self):
         if not self.page:
@@ -612,7 +685,10 @@ class CollegeRankingScraper:
             logger.info(f"Fetching (Playwright): {url}")
             for attempt in range(2):
                 if attempt == 0:
-                    self.page.goto(url, wait_until="domcontentloaded", timeout=self.timeout * 1000)
+                    if "usnews.com" in domain:
+                        self._usnews_goto_with_retries(url)
+                    else:
+                        self.page.goto(url, wait_until="domcontentloaded", timeout=self.timeout * 1000)
                 else:
                     logger.warning("Retrying browser fetch after transient page error")
                     self.page.reload(wait_until="domcontentloaded", timeout=self.timeout * 1000)
@@ -639,7 +715,7 @@ class CollegeRankingScraper:
                 return None
 
             if "usnews.com" in domain:
-                self._stabilize_usnews_page()
+                self._stabilize_usnews_page(url)
             elif "niche.com" in domain:
                 self._stabilize_niche_page()
             elif "timeshighereducation.com" in domain:
@@ -1847,8 +1923,9 @@ class CollegeRankingScraper:
                 if name_key in seen_names:
                     continue
                 seen_names.add(name_key)
-                rank = m["Rank"] if m["Rank"] else str(next_rank)
-                ordered.append({"Rank": rank, "RawName": m["RawName"]})
+                # Document order is the rank order; container-derived rank often
+                # picks a spurious "1" (e.g. Forbes tab labels) for every row.
+                ordered.append({"Rank": str(next_rank), "RawName": m["RawName"]})
                 next_rank += 1
             return self._dedupe(ordered)
 
@@ -2140,6 +2217,11 @@ class CollegeRankingScraper:
         if "forbes.com" in domain:
             if self._is_forbes_paginated_url(url):
                 return self._extract_forbes_rankings(soup)
+            path_l = urlparse(url).path.lower()
+            if "value-colleges" in path_l:
+                table_out = self._extract_forbes_rankings(soup)
+                if len(table_out) >= 50:
+                    return table_out
             out = self._extract_forbes_article_rankings(soup)
             if out:
                 return out
@@ -2406,6 +2488,8 @@ def scrape_college_website(
         scraper.close()
     if use_browser and headless:
         retry_scraper = CollegeRankingScraper(timeout=timeout, use_browser=use_browser, headless=False)
+        if usnews_soft_target is not None:
+            retry_scraper.usnews_soft_target = usnews_soft_target
         try:
             filtered_rows = retry_scraper._filter_site_rows(url, rows)
             if retry_scraper._needs_headed_retry(url, filtered_rows):
